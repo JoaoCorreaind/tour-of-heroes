@@ -2,9 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroesComponent } from './heroes/heroes.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './heroes/heroe-detail/hero-detail.component';
 
 const routes: Routes = [
-  { path: 'heroes', component: HeroesComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'heroes/:id', component: HeroDetailComponent },
+  { path: 'heroes', component: HeroesComponent },
 ]
 
 @NgModule({
