@@ -24,7 +24,7 @@ export class HeroService {
   getHeroById(id: number): Observable<Hero> {
     return this.http
       .get<Hero>(`${this.heroesUrl}/${id}`)
-      .pipe(tap((hero) => this.log(`fetched hero id ${id} and name ${hero.nome}`)));
+      .pipe(tap((hero) => this.log(`fetched hero id ${id} and name ${hero.name}`)));
   }
 
   private log(message: string): void {
