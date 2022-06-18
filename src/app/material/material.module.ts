@@ -17,7 +17,6 @@ const MODULES = [
   MatButtonModule,
   MatExpansionModule,
   MatIconModule,
-  FlexLayoutModule,
   MatTooltipModule,
   MatCardModule,
   MatListModule,

@@ -1,19 +1,7 @@
-<p>
-  <mat-toolbar color="primary">
-    <span>My Heroes Academia</span>
-    <span fxFlex></span>
-    <button mat-icon-button matTooltip="Dashboard" aria-label="Dashboard" routerLink="/dashboard">
-      <mat-icon>dashboard</mat-icon>
-    </button>
-    <button mat-icon-button matTooltip="Heroes" aria-label="Heroes list" routerLink="/heroes">
-      <mat-icon>sports_martial_arts</mat-icon>
-    </button>
-  </mat-toolbar>
-</p>
+<app-toolbar [title]="title" [menuItems]="menuItems"></app-toolbar>
 
 
 <div class="content" fxLayoutGap="12px">
   <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>
-
