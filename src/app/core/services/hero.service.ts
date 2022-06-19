@@ -15,6 +15,11 @@ export class HeroService {
     private messageService: MessagesService,
   ) { }
 
+  create(hero: Hero): Observable<Hero> {
+    return this.http
+      .post<Hero>(this.heroesUrl, hero)
+      .pipe(tap((hero) => this.log(`fetched hero id ${hero.id} and name ${hero.name}`)));;
+  }
   get(): Observable<Hero[]> {
     return this.http
       .get<Hero[]>(this.heroesUrl)
