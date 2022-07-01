@@ -1,5 +1,5 @@
-export interface MenuItem {
-  icon: string;
-  routerLink: string;
-  tooltipText: string;
+export class MenuItem {
+  icon!: string;
+  routerLink!: string;
+  tooltipText!: string;
 }
