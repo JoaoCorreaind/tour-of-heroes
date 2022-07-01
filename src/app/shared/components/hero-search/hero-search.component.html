@@ -1,18 +1,25 @@
-<mat-form-field class="input-width">
+<mat-form-field appearance="fill" class="input-width">
   <mat-label>{{ label }}</mat-label>
-  <input matInput placeholder="Hero name" #searchBox type="text" />
+  <input
+    (input)="search(searchBox.value)"
+    [matAutocomplete]="auto"
+    matInput
+    placeholder="Hero name"
+    #searchBox
+    type="text"
+  />
 
   <button
     mat-icon-button
-    maxSuffix
+    matSuffix
     *ngIf="searchBox.value"
-    (click)="searchBox.value='"
+    (click)="searchBox.value = ''"
   >
-    <max-icon>close</max-icon>
+    <mat-icon style="font-size: 12px">close</mat-icon>
   </button>
   <mat-autocomplete
     #auto="matAutocomplete"
-    (optionSelected)="searchBox.value='"
+    (optionSelected)="onSelected($event); searchBox.value = ''"
   >
     <mat-option *ngFor="let hero of heroes$ | async" [value]="hero">
       {{ hero.name }}

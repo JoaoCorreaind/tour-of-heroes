@@ -11,7 +11,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 @NgModule({
   declarations: [DashboardComponent],
   imports: [
-    CommonModule, FlexLayoutModule, MaterialModule, DashboardRoutingModule
+    CommonModule, FlexLayoutModule, MaterialModule, DashboardRoutingModule, SharedModule
   ]
 })
 export class DashboardModule { }

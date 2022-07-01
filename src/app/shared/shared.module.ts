@@ -2,6 +2,7 @@ import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 const COMPONENTS = [HeroSearchComponent]
@@ -10,7 +11,7 @@ const COMPONENTS = [HeroSearchComponent]
     COMPONENTS
   ],
   imports: [
-    COMPONENTS, MaterialModule, CommonModule
+    MaterialModule, CommonModule, FlexLayoutModule
   ],
   exports: [
     COMPONENTS,

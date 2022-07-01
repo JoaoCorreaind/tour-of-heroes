@@ -28,6 +28,10 @@ export class HeroesComponent implements OnInit {
     this.heroService.get().subscribe((res) => (this.heroes = res));
   }
 
+  onSelected(hero: Hero): void {
+    this.delete(hero);
+  }
+
   delete(hero: Hero) {
     const dialogData: DialogData = {
       cancelText: 'Cancel',
